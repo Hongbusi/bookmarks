@@ -1,12 +1,8 @@
 <script setup lang="ts">
-useHead({
-  title: 'Navigation',
-  meta: [
-    { name: 'description', content: 'Front-end documentation link navigation.' },
-  ],
-})
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <router-view />
+  <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
 </template>
