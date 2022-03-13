@@ -1,3 +1,7 @@
 <template>
-  <img alt="logo" src="./assets/logo.png">
+  <Nav />
 </template>
+
+<script setup lang="ts">
+
+</script>
