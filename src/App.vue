@@ -2,7 +2,7 @@
   <Header />
   <main class="container main">
     <Sidebar :sidebar="Object.keys(data)" />
-    <Content />
+    <Content :data="data" />
   </main>
 </template>
 

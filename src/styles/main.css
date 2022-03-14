@@ -1,7 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body,
 #app {
   height: 100vh;
+}
+
+html {
+  min-width: 1280px;
 }
 
 .container {

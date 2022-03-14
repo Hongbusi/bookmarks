@@ -5,6 +5,7 @@ const data: IData = {
     {
       name: 'Vue',
       logo: 'https://v3.cn.vuejs.org/logo.png',
+      desc: '这是一个描述',
       zhLink: 'https://v3.cn.vuejs.org',
       enLink: 'https://vuejs.org',
       gitHubLink: 'https://github.com/vuejs/core'
@@ -12,6 +13,23 @@ const data: IData = {
     {
       name: 'Vue Cli',
       logo: 'https://v3.cn.vuejs.org/logo.png',
+      desc: '这是一个描述',
+      zhLink: 'https://v3.cn.vuejs.org',
+      enLink: 'https://vuejs.org',
+      gitHubLink: 'https://github.com/vuejs/core'
+    },
+    {
+      name: 'Vue Cli',
+      logo: 'https://v3.cn.vuejs.org/logo.png',
+      desc: '这是一个描述',
+      zhLink: 'https://v3.cn.vuejs.org',
+      enLink: 'https://vuejs.org',
+      gitHubLink: 'https://github.com/vuejs/core'
+    },
+    {
+      name: 'Vue Cli',
+      logo: 'https://v3.cn.vuejs.org/logo.png',
+      desc: '这是一个描述',
       zhLink: 'https://v3.cn.vuejs.org',
       enLink: 'https://vuejs.org',
       gitHubLink: 'https://github.com/vuejs/core'
@@ -21,6 +39,7 @@ const data: IData = {
     {
       name: 'Vue',
       logo: 'https://v3.cn.vuejs.org/logo.png',
+      desc: '这是一个描述',
       zhLink: 'https://v3.cn.vuejs.org',
       enLink: 'https://vuejs.org',
       gitHubLink: 'https://github.com/vuejs/core'
@@ -28,6 +47,7 @@ const data: IData = {
     {
       name: 'Vue Cli',
       logo: 'https://v3.cn.vuejs.org/logo.png',
+      desc: '这是一个描述',
       zhLink: 'https://v3.cn.vuejs.org',
       enLink: 'https://vuejs.org',
       gitHubLink: 'https://github.com/vuejs/core'
@@ -37,6 +57,7 @@ const data: IData = {
     {
       name: 'Vue',
       logo: 'https://v3.cn.vuejs.org/logo.png',
+      desc: '这是一个描述',
       zhLink: 'https://v3.cn.vuejs.org',
       enLink: 'https://vuejs.org',
       gitHubLink: 'https://github.com/vuejs/core'
@@ -44,6 +65,7 @@ const data: IData = {
     {
       name: 'Vue Cli',
       logo: 'https://v3.cn.vuejs.org/logo.png',
+      desc: '这是一个描述',
       zhLink: 'https://v3.cn.vuejs.org',
       enLink: 'https://vuejs.org',
       gitHubLink: 'https://github.com/vuejs/core'
