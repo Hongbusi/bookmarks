@@ -1,6 +1,6 @@
 import type { DocData } from './types'
 
-export const docsData: DocData[] = [
+const docsData: DocData[] = [
   {
     title: 'Vue3',
     list: [
@@ -14,3 +14,5 @@ export const docsData: DocData[] = [
     ]
   }
 ]
+
+export default docsData
