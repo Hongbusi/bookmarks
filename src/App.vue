@@ -1,10 +1,9 @@
 <template>
   <Nav />
   <main container mx-auto>
-    <Doc />
+    <ListDocs />
   </main>
 </template>
 
 <script setup lang="ts">
-
 </script>
