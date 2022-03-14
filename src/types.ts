@@ -1,4 +1,4 @@
-export interface Doc {
+export interface IDoc {
   logo: string
   name: string
   zhLink: string
@@ -6,7 +6,4 @@ export interface Doc {
   gitHubLink: string
 }
 
-export interface DocData {
-  title: string
-  list: Doc[]
-}
+export type IData = Record<string, IDoc[]>

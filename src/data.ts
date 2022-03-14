@@ -1,18 +1,54 @@
-import type { DocData } from './types'
+import type { IData } from './types'
 
-const docsData: DocData[] = [
-  {
-    title: 'Vue3',
-    list: [
-      {
-        name: 'Vue',
-        logo: 'string',
-        zhLink: 'https://v3.cn.vuejs.org',
-        enLink: 'https://vuejs.org',
-        gitHubLink: 'https://github.com/vuejs/core'
-      }
-    ]
-  }
-]
+const data: IData = {
+  Vue3: [
+    {
+      name: 'Vue',
+      logo: 'https://v3.cn.vuejs.org/logo.png',
+      zhLink: 'https://v3.cn.vuejs.org',
+      enLink: 'https://vuejs.org',
+      gitHubLink: 'https://github.com/vuejs/core'
+    },
+    {
+      name: 'Vue Cli',
+      logo: 'https://v3.cn.vuejs.org/logo.png',
+      zhLink: 'https://v3.cn.vuejs.org',
+      enLink: 'https://vuejs.org',
+      gitHubLink: 'https://github.com/vuejs/core'
+    }
+  ],
+  React: [
+    {
+      name: 'Vue',
+      logo: 'https://v3.cn.vuejs.org/logo.png',
+      zhLink: 'https://v3.cn.vuejs.org',
+      enLink: 'https://vuejs.org',
+      gitHubLink: 'https://github.com/vuejs/core'
+    },
+    {
+      name: 'Vue Cli',
+      logo: 'https://v3.cn.vuejs.org/logo.png',
+      zhLink: 'https://v3.cn.vuejs.org',
+      enLink: 'https://vuejs.org',
+      gitHubLink: 'https://github.com/vuejs/core'
+    }
+  ],
+  Vite: [
+    {
+      name: 'Vue',
+      logo: 'https://v3.cn.vuejs.org/logo.png',
+      zhLink: 'https://v3.cn.vuejs.org',
+      enLink: 'https://vuejs.org',
+      gitHubLink: 'https://github.com/vuejs/core'
+    },
+    {
+      name: 'Vue Cli',
+      logo: 'https://v3.cn.vuejs.org/logo.png',
+      zhLink: 'https://v3.cn.vuejs.org',
+      enLink: 'https://vuejs.org',
+      gitHubLink: 'https://github.com/vuejs/core'
+    }
+  ]
+}
 
-export default docsData
+export default data
