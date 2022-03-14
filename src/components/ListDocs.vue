@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="doc-footer">
-        <a v-if="item.zhLink" :href="item.zhLink" target="_blank">
+        <a v-if="item.gitHubLink" :href="item.gitHubLink" target="_blank">
           <GitHub :size="18" />
         </a>
         <a v-if="item.zhLink" class="doc-footer__btn" :href="item.zhLink" target="_blank">中文</a>
