@@ -1,5 +1,5 @@
 <template>
-  <Nav />
+  <Header />
   <main container mx-auto>
     <ListDocs />
   </main>
