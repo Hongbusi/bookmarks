@@ -1,12 +1,13 @@
 <template>
   <Header />
   <main class="container main">
-    <Sidebar />
+    <Sidebar :sidebar="Object.keys(data)" />
     <Content />
   </main>
 </template>
 
 <script setup lang="ts">
+import data from './data'
 </script>
 
 <style scoped>
