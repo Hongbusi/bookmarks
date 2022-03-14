@@ -1,6 +1,6 @@
 <template>
-  <header w-full bg-white>
-    <div container px-4 mx-auto h-15 flex justify-between items-center>
+  <header>
+    <div>
       <span>Docs Nav</span>
       <a href="https://github.com/Hongbusi/navigation" target="_blank">GitHub</a>
     </div>

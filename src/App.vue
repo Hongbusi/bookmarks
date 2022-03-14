@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <main container mx-auto>
+  <main>
     <ListDocs />
   </main>
 </template>
