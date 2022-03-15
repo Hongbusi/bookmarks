@@ -1,10 +1,8 @@
 <template>
   <aside class="sidebar">
-    <nav class="sidebar-nav">
-      <a v-for="item in sidebar" :key="item" class="link active" :href="`#${item}`">
-        {{ item }}
-      </a>
-    </nav>
+    <a v-for="item in sidebar" :key="item" class="sidebar-link" :href="`#${item}`">
+      {{ item }}
+    </a>
   </aside>
 </template>
 
@@ -21,15 +19,11 @@ const sidebar = Object.keys(data)
   top: var(--hbs-header-height);
   bottom: 0;
   left: 0;
-  padding: 0 var(--hbs-blank-width) 96px calc((100% - var(--hbs-max-width)) / 2 + var(--hbs-blank-width));
+  padding: 20px var(--hbs-blank-width) 96px calc((100% - var(--hbs-max-width)) / 2 + var(--hbs-blank-width));
   width: calc((100% - var(--hbs-max-width)) / 2 + var(--hbs-sidebar-width));
   height: 100%;
   background-color: var(--docs-c-bg);
   border-right: 1px solid var(--hbs-c-border);
-}
-
-.sidebar-nav {
-  padding-top: 24px;
 }
 
 @media (max-width: 1440px) {
@@ -38,7 +32,7 @@ const sidebar = Object.keys(data)
   }
 }
 
-.link {
+.sidebar-link {
   position: relative;
   display: block;
   padding-left: var(--hbs-blank-width);
@@ -49,16 +43,16 @@ const sidebar = Object.keys(data)
   opacity: 0.66;
 }
 
-.link.active {
+.sidebar-link.active {
   color: var(--hbs-c-text-primary);
   background-color: var(--hbs-c-bg-primary-light);
 }
 
-.link.active:hover {
+.sidebar-link.active:hover {
   color: var(--hbs-c-text-primary);
 }
 
-.link.active::before {
+.sidebar-link.active::before {
   position: absolute;
   top: 0;
   left: 0;
