@@ -6,6 +6,10 @@ declare module 'vue' {
   export interface GlobalComponents {
     Content: typeof import('./components/Content.vue')['default']
     ContentList: typeof import('./components/ContentList.vue')['default']
+    DocsList: typeof import('./components/DocsList.vue')['default']
+    DocsSec: typeof import('./components/DocsSec.vue')['default']
+    DocsSecItem: typeof import('./components/DocsSecItem.vue')['default']
+    DocsSection: typeof import('./components/DocsSection.vue')['default']
     GitHub: typeof import('./components/icons/GitHub.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
     ListDocs: typeof import('./components/ListDocs.vue')['default']

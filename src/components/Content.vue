@@ -1,7 +1,9 @@
 <template>
   <div class="content">
-    <div class="content-nav">
-      <ContentList />
+    <div class="content-list">
+      <div class="content-list-item">
+        <DocsSec />
+      </div>
     </div>
   </div>
 </template>
@@ -12,8 +14,8 @@
   padding-left: calc((100vw - var(--hbs-max-width)) / 2 + var(--hbs-sidebar-width));
 }
 
-.content-nav {
-  padding: 24px calc((100vw - var(--hbs-max-width)) / 2) 96px 32px;
+.content-list {
+  padding: 24px calc((100vw - var(--hbs-max-width)) / 2 + var(--hbs-blank-width)) 96px 32px;
 }
 
 @media (max-width: 1440px) {
@@ -21,7 +23,7 @@
     padding-left: 0;
   }
 
-  .content-nav {
+  .content-list {
     padding: 24px var(--hbs-blank-width);
   }
 }

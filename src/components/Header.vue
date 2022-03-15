@@ -11,6 +11,7 @@
 
 <style scoped>
 .header {
+  z-index: 10;
   position: fixed;
   top: 0;
   right: 0;
