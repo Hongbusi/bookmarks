@@ -11,11 +11,9 @@
 
 <style scoped>
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  border-bottom: 1px solid var(--docs-c-border);
+  background-color: var(--docs-c-bg);
+  /* border-bottom: 1px solid var(--docs-c-border); */
 }
 
 .nav {

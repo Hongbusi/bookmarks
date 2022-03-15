@@ -22,13 +22,7 @@ import data from '../config'
 
 <style scoped>
 .content-list {
-  padding: 32px calc((100vw - var(--docs-max-width)) / 2) 96px 32px;
-}
-
-@media (max-width: 1376px) {
-  .content-list {
-    padding-left: var(--docs-sidebar-width);
-  }
+  /* padding: 32px calc((100vw - var(--docs-max-width)) / 2) 96px 32px; */
 }
 
 .doc-sec {
@@ -41,13 +35,13 @@ import data from '../config'
   margin-right: 20px;
   height: 44px;
   color: #66687d;
-  background: #f9f9f9;
+  background-color: var(--docs-c-bg);
 }
 
 .doc-sec-header__icon {
   width: 2px;
   height: 24px;
-  background: #42b883;
+  background: var(--docs-c-red);
 }
 
 .doc-sec-header__title {

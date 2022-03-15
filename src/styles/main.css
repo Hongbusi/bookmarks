@@ -5,6 +5,5 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: var(--docs-c-text);
-  background-color: var(--docs-c-bg);
-  -webkit-font-smoothing: antialiased;
+  background-color: var(--docs-c-bg-gray);
 }
