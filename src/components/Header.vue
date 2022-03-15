@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <div class="container nav" style="height: 60px;">
+    <div class="nav">
       <span class="title">Docs Nav</span>
       <a href="https://github.com/Hongbusi/navigation" target="_blank">
         <GitHub />
@@ -11,6 +11,10 @@
 
 <style scoped>
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   border-bottom: 1px solid rgba(60, 60, 60, .12);
 }
 
@@ -18,7 +22,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--docs-max-width);
+  height: var(--docs-header-height);
 }
 
 .nav .title {

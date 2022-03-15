@@ -17,8 +17,10 @@ defineProps<{
 <style scoped>
 .sidebar {
   overflow-y: auto;
-  padding: 32px 32px 96px calc((100% - var(--docs-max-width)) / 2 + 20px);
-  width: 248px;
+  position: fixed;
+  top: var(--docs-header-height);
+  left: 0;
+  padding: 0 32px 96px calc((100% - var(--docs-max-width)) / 2 + 20px);
   width: calc((100% - var(--docs-max-width)) / 2 + var(--docs-sidebar-width));
   height: 100%;
   border-right: 1px solid rgba(60, 60, 60, .12);
@@ -31,9 +33,6 @@ defineProps<{
 
 .link-text {
   line-height: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #213547;
   transition: color .25s;
 }
 

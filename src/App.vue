@@ -1,9 +1,14 @@
 <template>
-  <Header />
+  <!-- <Header />
   <main class="main">
     <Sidebar :sidebar="Object.keys(data)" />
     <Content :data="data" />
-  </main>
+  </main> -->
+  <div class="h-docs">
+    <Header />
+    <Sidebar />
+    <Content />
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -11,8 +16,7 @@ import data from './data'
 </script>
 
 <style scoped>
-.main {
-  display: flex;
-  height: calc(100vh - 60px);
+.h-docs {
+  height: 100vh;
 }
 </style>
