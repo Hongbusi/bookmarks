@@ -34,20 +34,19 @@ import data from '../config'
   align-items: center;
   margin-right: 20px;
   height: 44px;
-  color: #66687d;
-  background-color: var(--docs-c-bg);
+  background-color: var(--hbs-c-bg-gray);
 }
 
 .doc-sec-header__icon {
   width: 2px;
   height: 24px;
-  background: var(--docs-c-red);
+  background: var(--hbs-c-bg-red);
 }
 
 .doc-sec-header__title {
   margin-left: 18px;
   font-size: 14px;
   font-weight: 700;
-  color: #66687d;
+  color: var(--hbs-c-text-red);
 }
 </style>

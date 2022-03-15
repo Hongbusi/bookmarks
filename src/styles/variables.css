@@ -7,9 +7,14 @@
 
 :root {
   --hbs-c-white: #fff;
+  --hbs-c-red: red;
+  --hbs-c-gray: #f9f9f9;
 }
 
 :root {
   --hbs-c-bg: var(--hbs-c-white);
+  --hbs-c-bg-red: var(--hbs-c-red);
+  --hbs-c-bg-gray: var(--hbs-c-gray);
   --hbs-c-border: rgba(60, 60, 60, .12);
+  --hbs-c-text-red: var(--hbs-c-red);
 }

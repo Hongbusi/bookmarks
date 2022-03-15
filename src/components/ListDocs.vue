@@ -44,7 +44,7 @@ defineProps<{
   flex: 1 1;
   min-width: 253px;
   height: 130px;
-  background: #f9f9f9;
+  background: var(--hbs-c-bg-gray);
 }
 
 .doc-header {
