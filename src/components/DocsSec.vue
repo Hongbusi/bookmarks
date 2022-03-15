@@ -1,7 +1,7 @@
 
 <template>
   <div v-for="key in Object.keys(data)" :key="key" class="docs-sec">
-    <div class="docs-sec-header">
+    <div :id="key" class="docs-sec-header">
       {{ key }}
     </div>
 
