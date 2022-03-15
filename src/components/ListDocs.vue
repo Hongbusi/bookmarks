@@ -36,8 +36,8 @@ defineProps<{
   flex-wrap: wrap;
 }
 .list-item {
-  margin-top: 20px;
-  margin-right: 20px;
+  margin-top: var(--hbs-blank-width);
+  margin-right: var(--hbs-blank-width);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

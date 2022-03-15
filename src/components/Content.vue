@@ -1,16 +1,18 @@
 <template>
   <div class="content">
-    <ContentList />
+    <div class="content-nav">
+      <ContentList />
+    </div>
   </div>
 </template>
 
 <style scoped>
 .content {
-  overflow-y: auto;
-  padding-left: 20px;
-  height: 100%;
-  /* padding-top: var(--docs-header-height); */
-  /* padding-left: calc((100vw - var(--docs-max-width)) / 2 + var(--docs-sidebar-width)); */
-  /* min-width: var(--docs-max-width); */
+  padding-top: var(--hbs-header-height);
+  padding-left: calc((100vw - var(--hbs-max-width)) / 2 + var(--hbs-sidebar-width));
+}
+
+.content-nav {
+  padding: 24px calc((100vw - var(--hbs-max-width)) / 2) 96px 32px;
 }
 </style>

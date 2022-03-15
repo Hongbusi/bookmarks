@@ -1,11 +1,13 @@
 <template>
-  <div class="sidebar">
-    <a v-for="item in sidebar" :key="item" class="link" :href="`#${item}`">
-      <p class="link-text">
-        {{ item }}
-      </p>
-    </a>
-  </div>
+  <aside class="sidebar">
+    <nav class="sidebar-nav">
+      <a v-for="item in sidebar" :key="item" class="link" :href="`#${item}`">
+        <p class="link-text">
+          {{ item }}
+        </p>
+      </a>
+    </nav>
+  </aside>
 </template>
 
 <script setup lang="ts">
@@ -17,10 +19,19 @@ const sidebar = Object.keys(data)
 <style scoped>
 .sidebar {
   overflow-y: auto;
-  padding: 20px;
-  width: var(--docs-sidebar-width);
+  position: fixed;
+  top: var(--hbs-header-height);
+  bottom: 0;
+  left: 0;
+  padding: 0 32px 96px calc((100% - var(--hbs-max-width)) / 2 + var(--hbs-blank-width));
+  width: calc((100% - var(--hbs-max-width)) / 2 + var(--hbs-sidebar-width));
   height: 100%;
   background-color: var(--docs-c-bg);
+  border-right: 1px solid var(--hbs-c-border);
+}
+
+.sidebar-nav {
+  padding-top: 24px;
 }
 
 .link {

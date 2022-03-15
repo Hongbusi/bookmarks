@@ -1,19 +1,15 @@
 :root {
-  --docs-max-width: 1376px;
-  --docs-header-height: 55px;
-  --docs-sidebar-width: 260px;
+  --hbs-blank-width: 18px;
+  --hbs-max-width: 1376px;
+  --hbs-header-height: 55px;
+  --hbs-sidebar-width: 272px;
 }
 
 :root {
-  --docs-c-white: #ffffff;
-  --docs-c-gray: #f0f2f5;
-  --docs-c-light-gray: #3c3c3c;
-  --docs-c-red: red;
+  --hbs-c-white: #fff;
 }
 
 :root {
-  --docs-c-bg: var(--docs-c-white);
-  --docs-c-bg-gray: var(--docs-c-gray);
-  --docs-c-text: #333;
-  --docs-c-border: var(--docs-c-light-gray);
+  --hbs-c-bg: var(--hbs-c-white);
+  --hbs-c-border: rgba(60, 60, 60, .12);
 }
