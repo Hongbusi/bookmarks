@@ -23,7 +23,7 @@ defineProps<{
 <style scoped>
 .content {
   flex: 1;
-  padding: 32px 0 96px 32px;
+  padding: 32px calc((100% - var(--docs-max-width)) / 2 + 20px) 96px 32px;
   margin-right: -20px;
   height: 100%;
 }

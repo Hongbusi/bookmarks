@@ -1,5 +1,6 @@
-* {
-  box-sizing: border-box;
+:root {
+  --docs-max-width: 1280px;
+  --docs-sidebar-width: 248px;
 }
 
 html,
@@ -9,7 +10,7 @@ body,
 }
 
 html {
-  min-width: 1280px;
+  min-width: var(--docs-max-width);
 }
 
 .container {
@@ -17,5 +18,5 @@ html {
   padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
-  width: 1280px;
+  width: var(--docs-max-width);
 }

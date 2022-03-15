@@ -17,8 +17,9 @@ defineProps<{
 <style scoped>
 .sidebar {
   overflow-y: auto;
-  padding: 32px 32px 96px 0;
+  padding: 32px 32px 96px calc((100% - var(--docs-max-width)) / 2 + 20px);
   width: 248px;
+  width: calc((100% - var(--docs-max-width)) / 2 + var(--docs-sidebar-width));
   height: 100%;
   border-right: 1px solid rgba(60, 60, 60, .12);
 }

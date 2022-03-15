@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <main class="container main">
+  <main class="main">
     <Sidebar :sidebar="Object.keys(data)" />
     <Content :data="data" />
   </main>
