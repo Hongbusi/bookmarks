@@ -7,14 +7,16 @@
 
 :root {
   --hbs-c-white: #fff;
-  --hbs-c-red: red;
   --hbs-c-gray: #f9f9f9;
+  --hbs-c-primary: #1890ff;
+  --hbs-c-primary-light: #e6f7ff;
 }
 
 :root {
   --hbs-c-bg: var(--hbs-c-white);
-  --hbs-c-bg-red: var(--hbs-c-red);
   --hbs-c-bg-gray: var(--hbs-c-gray);
+  --hbs-c-bg-primary: var(--hbs-c-primary);
+  --hbs-c-bg-primary-light: var(--hbs-c-primary-light);
   --hbs-c-border: rgba(60, 60, 60, .12);
-  --hbs-c-text-red: var(--hbs-c-red);
+  --hbs-c-text-primary: var(--hbs-c-primary);
 }
