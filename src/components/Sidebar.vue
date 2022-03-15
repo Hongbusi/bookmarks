@@ -48,7 +48,7 @@ const sidebar = Object.keys(data)
   background-color: var(--hbs-c-bg-primary-light);
 }
 
-.sidebar-link.active:hover {
+.sidebar-link:hover {
   color: var(--hbs-c-text-primary);
 }
 
