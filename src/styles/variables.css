@@ -7,7 +7,7 @@
 
 :root {
   --docs-header-height: 55px;
-  --docs-sidebar-width: 240px;
+  --docs-sidebar-width: 260px;
 }
 
 :root {
@@ -20,4 +20,5 @@
 :root {
   --docs-c-bg: var(--docs-c-white);
   --docs-c-text: var(--docs-c-indigo);
+  --docs-c-border: rgba(60, 60, 60, .12);
 }
