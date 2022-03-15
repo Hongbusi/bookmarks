@@ -25,6 +25,12 @@ import data from '../config'
   padding: 32px calc((100vw - var(--docs-max-width)) / 2) 96px 32px;
 }
 
+@media (max-width: 1376px) {
+  .content-list {
+    padding-left: var(--docs-sidebar-width);
+  }
+}
+
 .doc-sec {
   margin-bottom: 20px;
 }

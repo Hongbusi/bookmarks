@@ -27,6 +27,12 @@ const sidebar = Object.keys(data)
   border-right: 1px solid var(--docs-c-border);
 }
 
+@media (max-width: 1376px) {
+  .sidebar {
+    padding-left: 0;
+  }
+}
+
 .link {
   display: block;
   padding: 8px 0;
