@@ -1,7 +1,8 @@
 
 <template>
-  <div v-for="key in Object.keys(data)" :key="key" class="docs-sec">
-    <div :id="key" class="docs-sec-header">
+  <div v-for="key in Object.keys(data)" :id="key" :key="key" class="docs-sec">
+    <a :href="`#${key}`" class="header-anchor" />
+    <div class="docs-sec-header">
       {{ key }}
     </div>
 
@@ -15,7 +16,7 @@ import data from '../config'
 
 <style scoped>
 .docs-sec {
-  margin-bottom: 20px;
+  padding-top: 30px;
 }
 
 .docs-sec-header {

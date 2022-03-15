@@ -1,5 +1,5 @@
 <template>
-  <aside class="sidebar">
+  <aside ref="container" class="sidebar">
     <a v-for="item in sidebar" :key="item" class="sidebar-link" :href="`#${item}`">
       {{ item }}
     </a>
@@ -7,9 +7,14 @@
 </template>
 
 <script setup lang="ts">
+import { resolveHeaders, useActiveAnchor } from '../composables/outline'
+
 import data from '../config'
+const container = ref()
+const marker = ref()
 
 const sidebar = Object.keys(data)
+useActiveAnchor(container, marker)
 </script>
 
 <style scoped>
