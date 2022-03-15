@@ -1,6 +1,6 @@
-# Navigation
+# Docs Navigation
 
-Front-end documentation link navigation.
+Front-end documentation navigation.
 
 ## LICENSE
 
