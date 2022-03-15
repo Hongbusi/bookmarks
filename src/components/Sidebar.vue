@@ -21,8 +21,9 @@ const sidebar = Object.keys(data)
   top: var(--docs-header-height);
   bottom: 0;
   left: 0;
-  padding: 32px 32px 96px calc((100% - var(--docs-max-width)) / 2 + 20px);
+  padding: 32px 32px 96px calc((100vw - var(--docs-max-width)) / 2 + 20px);
   width: calc((100% - var(--docs-max-width)) / 2 + var(--docs-sidebar-width));
+  min-width: var(--docs-sidebar-width);
   border-right: 1px solid var(--docs-c-border);
 }
 
