@@ -12,7 +12,7 @@
           {{ item.desc }}
         </div>
         <div class="doc-footer">
-          <a v-if="item.gitHubLink" :href="item.gitHubLink" target="_blank">
+          <a v-if="item.repo" :href="`https://github.com/${item.repo}`" target="_blank">
             <GitHub :size="20" />
           </a>
           <a v-if="item.zhLink" class="doc-footer__btn" :href="item.zhLink" target="_blank">中文</a>
