@@ -15,4 +15,14 @@
 .content-nav {
   padding: 24px calc((100vw - var(--hbs-max-width)) / 2) 96px 32px;
 }
+
+@media (max-width: 1440px) {
+  .content {
+    padding-left: 0;
+  }
+
+  .content-nav {
+    padding: 24px var(--hbs-blank-width);
+  }
+}
 </style>
