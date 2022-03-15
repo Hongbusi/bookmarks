@@ -1,17 +1,17 @@
 <template>
   <div class="sidebar">
-    <a v-for="item in sidebar" :key="item" class="link" :href="`#${item}`">
+    <!-- <a v-for="item in sidebar" :key="item" class="link" :href="`#${item}`">
       <p class="link-text">
         {{ item }}
       </p>
-    </a>
+    </a> -->
   </div>
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  sidebar: string[]
-}>()
+// defineProps<{
+//   sidebar: string[]
+// }>()
 </script>
 
 <style scoped>
