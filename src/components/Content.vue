@@ -18,7 +18,7 @@
   padding: 24px calc((100vw - var(--hbs-max-width)) / 2 + var(--hbs-blank-width)) 96px 32px;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1400px) {
   .content {
     padding-left: 0;
   }

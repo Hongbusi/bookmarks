@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { resolveHeaders, useActiveAnchor } from '../composables/outline'
+import { useActiveAnchor } from '../composables/outline'
 
 import data from '../config'
 const container = ref()
@@ -31,7 +31,7 @@ useActiveAnchor(container, marker)
   border-right: 1px solid var(--hbs-c-border);
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1400px) {
   .sidebar {
     display: none;
   }
