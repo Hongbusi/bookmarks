@@ -16,7 +16,8 @@ import data from '../config'
 
 <style scoped>
 .docs-sec {
-  padding-top: 30px;
+  padding-top: 90px;
+  margin-top: -50px;
 }
 
 .docs-sec-header {
