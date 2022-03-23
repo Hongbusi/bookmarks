@@ -1,14 +1,12 @@
 <template>
-  <div class="h-layout">
-    <Header />
-
-    <Sidebar />
-    <Content />
-  </div>
+  <router-view />
 </template>
 
-<style scoped>
-.h-layout {
-  min-height: 100vh;
-}
-</style>
+<script setup lang="ts">
+useHead({
+  title: 'Docs Navigation',
+  meta: [
+    { name: 'description', content: 'Front-end documentation navigation.' }
+  ]
+})
+</script>
