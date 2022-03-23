@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <nav class="container nav">
+    <nav class="docs-container nav">
       <span class="nav-title">Docs Nav</span>
       <a href="https://github.com/Hongbusi/navigation" target="_blank">
         <GitHub />

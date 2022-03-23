@@ -11,7 +11,8 @@
 </template>
 
 <script setup lang="ts">
-import data from '../config'
+import { useDocsData } from '~/hooks/useDocsData'
+const data = useDocsData()
 </script>
 
 <style scoped>

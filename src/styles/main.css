@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.container {
+.docs-container {
   padding-right: var(--hbs-blank-width);
   padding-left: var(--hbs-blank-width);
   margin-left: auto;

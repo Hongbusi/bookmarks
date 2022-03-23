@@ -8,8 +8,9 @@
 
 <script setup lang="ts">
 import { useActiveAnchor } from '../composables/outline'
+import { useDocsData } from '~/hooks/useDocsData'
+const data = useDocsData()
 
-import data from '../config'
 const container = ref()
 const marker = ref()
 
