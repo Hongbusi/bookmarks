@@ -5,9 +5,9 @@ body,
   height: 100%;
 }
 
-/* html {
+html {
   scroll-behavior: smooth;
-} */
+}
 
 body {
   background-color: #edeef3 !important;
