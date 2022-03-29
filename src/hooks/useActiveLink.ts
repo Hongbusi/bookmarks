@@ -3,6 +3,16 @@ import { throttleAndDebounce } from '~/utils'
 export function useActiveLink() {
   const isOutlineEnabled = useMediaQuery('(min-width: 137px)')
   const onScroll = throttleAndDebounce(setActiveLink, 100)
+  const onClick = (event: Event) => {
+    const target = event.target as HTMLElement
+
+    if (target.matches('.js-link-btn')) {
+      const anchors = [].slice.call(document.querySelectorAll('.js-header-anchor')) as HTMLDivElement[]
+      const targetAnchor = anchors[Number(target.dataset.index) - 1]
+      const menuListEl = document.querySelector('.js-menu-list') as HTMLElement
+      window.scrollTo(0, targetAnchor.offsetTop - menuListEl.offsetHeight)
+    }
+  }
 
   function setActiveLink(): void {
     if (!isOutlineEnabled.value) {
@@ -25,9 +35,9 @@ export function useActiveLink() {
     }
   }
 
-  let prevActiveLink: HTMLDivElement | null = null
+  let prevActiveLink: HTMLElement | null = null
 
-  function activateLink(activeLink: HTMLDivElement): void {
+  function activateLink(activeLink: HTMLElement): void {
     if (prevActiveLink) {
       prevActiveLink.classList.remove('active')
     }
@@ -65,9 +75,11 @@ export function useActiveLink() {
   onMounted(() => {
     requestAnimationFrame(setActiveLink)
     window.addEventListener('scroll', onScroll)
+    window.addEventListener('click', onClick)
   })
 
   onUnmounted(() => {
     window.removeEventListener('scroll', onScroll)
+    window.removeEventListener('click', onClick)
   })
 }
