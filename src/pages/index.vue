@@ -1,7 +1,8 @@
 <template>
   <div>
-    <Header />
+    <!-- <Header />
     <Sidebar />
-    <Content />
+    <Content /> -->
+    home
   </div>
 </template>
