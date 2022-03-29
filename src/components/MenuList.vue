@@ -1,7 +1,7 @@
 <template>
-  <div class="menu-list sticky top-0 pb-20px">
+  <div class="menu-list sticky top-0 pb-20px js-menu-list">
     <div class="flex flex-wrap justify-center items-center p-10px bg-white">
-      <div class="btn active js-link-btn">
+      <div class="btn js-link-btn">
         Vue(Mobile)
       </div>
       <div v-for="num in 30" :key="num" class="btn js-link-btn">
