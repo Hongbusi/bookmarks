@@ -9,6 +9,7 @@ declare module 'vue' {
     DocsSec: typeof import('./components/DocsSec.vue')['default']
     GitHub: typeof import('./components/icons/GitHub.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
+    MenuList: typeof import('./components/MenuList.vue')['default']
     Sidebar: typeof import('./components/Sidebar.vue')['default']
   }
 }
