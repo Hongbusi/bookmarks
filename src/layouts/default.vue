@@ -1,7 +1,7 @@
 <template>
   <main>
     <header class="bg-white">
-      <nav class="flex justify-between items-center m-x-auto container h-60px">
+      <nav class="flex justify-between items-center mx-auto container h-60px">
         <h2 class="text-lg">
           Docs Nav
         </h2>
