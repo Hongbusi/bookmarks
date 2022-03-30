@@ -22,15 +22,17 @@
       <div class="flex flex-wrap justify-between mx--10px">
         <div v-for="(item, index) in bookmark" :key="index" class="flex-1 px-10px min-w-250px">
           <div class="flex flex-col mt20px h-140px bg-white">
-            <div class="flex-1 px-14px py-10px">
-              <div class="flex items-center">
-                <img class="mr-10px w-40px h-40px" :src="item.logo" :alt="item.name">
-                {{ item.name }}
+            <a :href="item.zhLink" target="_blank" class="flex-1">
+              <div class="px-14px py-10px">
+                <div class="flex items-center">
+                  <img class="mr-10px w-40px h-40px" :src="item.logo" :alt="item.name">
+                  {{ item.name }}
+                </div>
+                <p class="line-clamp-2 mt-10px text-[#727171] text-sm">
+                  {{ item.desc }}
+                </p>
               </div>
-              <p class="line-clamp-2 mt-10px text-[#727171] text-sm">
-                {{ item.desc }}
-              </p>
-            </div>
+            </a>
             <div class="flex items-center px-14px h-30px bg-[#c3c4ce]">
               <a :href="item.github" target="_blank">
                 <carbon-logo-github />
