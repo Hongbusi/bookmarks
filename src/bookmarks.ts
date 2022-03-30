@@ -33,6 +33,14 @@ const bookmarks: Bookmarks = {
       zhLink: '',
       enLink: 'https://pinia.vuejs.org',
       github: 'https://github.com/vuejs/pinia'
+    },
+    {
+      name: 'Vue CLI',
+      logo: 'https://cli.vuejs.org/favicon.png',
+      desc: 'Vue.js 开发的标准工具。',
+      zhLink: 'https://cli.vuejs.org/zh',
+      enLink: 'https://cli.vuejs.org',
+      github: 'https://github.com/vuejs/vue-cli'
     }
   ]
 }
