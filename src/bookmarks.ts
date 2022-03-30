@@ -5,10 +5,10 @@ const bookmarks: Bookmarks = {
     {
       name: 'Vue3',
       logo: 'https://v3.cn.vuejs.org/logo.png',
-      desc: 'Vue is a progressive framework for building user interfaces.',
+      desc: '渐进式 JavaScript 框架。',
       zhLink: 'https://v3.cn.vuejs.org',
       enLink: 'https://vuejs.org',
-      github: 'https://github.com/vuejs'
+      github: 'https://github.com/vuejs/core'
     },
     {
       name: 'Vue Router',
@@ -19,20 +19,20 @@ const bookmarks: Bookmarks = {
       github: 'https://github.com/vuejs/router'
     },
     {
-      name: 'Vue3',
+      name: 'Vuex',
       logo: 'https://v3.cn.vuejs.org/logo.png',
-      desc: 'Vue is a progressive framework for buildingbuildingbuildingbuildingbuilding user interfaces.',
-      zhLink: 'https://v3.cn.vuejs.org',
-      enLink: 'https://vuejs.org',
-      github: 'https://github.com/vuejs'
+      desc: 'Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式 + 库。',
+      zhLink: 'https://vuex.vuejs.org/zh',
+      enLink: 'https://vuex.vuejs.org',
+      github: 'https://github.com/vuejs/vuex'
     },
     {
-      name: 'Vue3',
-      logo: 'https://v3.cn.vuejs.org/logo.png',
-      desc: 'Vue is a progressive framework for building user interfaces.',
-      zhLink: 'https://v3.cn.vuejs.org',
-      enLink: 'https://vuejs.org',
-      github: 'https://github.com/vuejs'
+      name: 'Pinia',
+      logo: 'https://pinia.vuejs.org/logo.svg',
+      desc: 'The Vue Store that you will enjoy using.',
+      zhLink: '',
+      enLink: 'https://pinia.vuejs.org',
+      github: 'https://github.com/vuejs/pinia'
     }
   ]
 }

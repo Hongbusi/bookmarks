@@ -22,7 +22,7 @@
       <div class="flex flex-wrap justify-between mx--10px">
         <div v-for="(item, index) in bookmark" :key="index" class="flex-1 px-10px min-w-250px">
           <div class="flex flex-col mt20px h-140px bg-white">
-            <a :href="item.zhLink" target="_blank" class="flex-1">
+            <a :href="item.zhLink || item.enLink" target="_blank" class="flex-1">
               <div class="px-14px py-10px">
                 <div class="flex items-center">
                   <img class="mr-10px w-40px h-40px" :src="item.logo" :alt="item.name">
@@ -37,8 +37,18 @@
               <a :href="item.github" target="_blank">
                 <carbon-logo-github />
               </a>
-              <a :href="item.zhLink" target="_blank" class="py-1px mx-8px w-30px text-center transition-all border rounded-2px  border-gray-500/50 text-xs hover:text-[#de3a31] hover:border-[#de3a31]">中文</a>
-              <a :href="item.enLink" target="_blank" class="py-1px w-30px text-center transition-all border rounded-2px  border-gray-500/50 text-xs hover:text-[#de3a31] hover:border-[#de3a31]">EN</a>
+              <a
+                v-if="item.zhLink"
+                :href="item.zhLink"
+                target="_blank"
+                class="py-1px ml-8px w-30px text-center transition-all border rounded-2px  border-gray-500/50 text-xs hover:text-[#de3a31] hover:border-[#de3a31]"
+              >中文</a>
+              <a
+                v-if="item.enLink"
+                :href="item.enLink"
+                target="_blank"
+                class="py-1px ml-8px w-30px text-center transition-all border rounded-2px  border-gray-500/50 text-xs hover:text-[#de3a31] hover:border-[#de3a31]"
+              >EN</a>
             </div>
           </div>
         </div>
