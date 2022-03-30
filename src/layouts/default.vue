@@ -1,5 +1,5 @@
 <template>
-  <main class="">
+  <main>
     <header class="bg-white px-16px sm:px-0">
       <nav class="flex justify-between items-center mx-auto container h-60px">
         <h2 class="text-lg">
@@ -17,4 +17,6 @@
       Copyright (c) 2022 Hongbusi.
     </footer>
   </main>
+
+  <Plum />
 </template>
