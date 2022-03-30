@@ -10,6 +10,8 @@ import Components from 'unplugin-vue-components/vite'
 import Unocss from 'unocss/vite'
 
 export default defineConfig({
+  base: '/bookmarks/',
+
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`
