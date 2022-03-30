@@ -4,9 +4,9 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'Docs Navigation',
+  title: 'Bookmarks',
   meta: [
-    { name: 'description', content: 'Front-end documentation navigation.' }
+    { name: 'description', content: 'Bookmarks for Frontend Developers.' }
   ]
 })
 </script>

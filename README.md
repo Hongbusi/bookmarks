@@ -1,6 +1,6 @@
-# Docs Navigation
+# Bookmarks
 
-Front-end documentation navigation.
+Bookmarks for Frontend Developers.
 
 ## LICENSE
 
