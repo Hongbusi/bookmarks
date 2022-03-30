@@ -2,13 +2,13 @@ import type { ViteSSGContext } from 'vite-ssg'
 
 export type UserModule = (ctx: ViteSSGContext) => void
 
-export interface DocsDataItem {
-  logo: string
+export interface Bookmark {
   name: string
+  logo: string
   desc: string
   zhLink: string
   enLink: string
-  repo: string
+  github: string
 }
 
-export type DocsData = Record<string, DocsDataItem[]>
+export type Bookmarks = Record<string, Bookmark[]>

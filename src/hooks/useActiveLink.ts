@@ -8,7 +8,7 @@ export function useActiveLink() {
 
     if (target.matches('.js-link-btn')) {
       const anchors = [].slice.call(document.querySelectorAll('.js-header-anchor')) as HTMLDivElement[]
-      const targetAnchor = anchors[Number(target.dataset.index) - 1]
+      const targetAnchor = anchors[Number(target.dataset.index)]
       const menuListEl = document.querySelector('.js-menu-list') as HTMLElement
       window.scrollTo(0, targetAnchor.offsetTop - menuListEl.offsetHeight)
     }
