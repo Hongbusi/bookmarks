@@ -27,6 +27,7 @@
     "typescript": "^4.5.4",
     "unocss": "^0.29.3",
     "unplugin-auto-import": "^0.6.4",
+    "unplugin-icons": "^0.14.1",
     "unplugin-vue-components": "^0.18.0",
     "vite": "^2.8.0",
     "vite-plugin-pages": "^0.22.0",

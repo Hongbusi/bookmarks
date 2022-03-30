@@ -4,7 +4,7 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    MenuList: typeof import('./components/MenuList.vue')['default']
+    CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default']
     Plum: typeof import('./components/Plum.vue')['default']
   }
 }

@@ -4,6 +4,8 @@ import vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import AutoImport from 'unplugin-auto-import/vite'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
 import Unocss from 'unocss/vite'
 
@@ -40,7 +42,17 @@ export default defineConfig({
     Components({
       extensions: ['vue'],
       include: [/\.vue$/, /\.vue\?vue/],
-      dts: 'src/components.d.ts'
+      dts: 'src/components.d.ts',
+      resolvers: [
+        IconsResolver({
+          componentPrefix: ''
+        })
+      ]
+    }),
+
+    Icons({
+      defaultClass: 'inline',
+      defaultStyle: 'vertical-align: sub;'
     }),
 
     Unocss()

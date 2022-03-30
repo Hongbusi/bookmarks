@@ -11,10 +11,7 @@ export default defineConfig({
   presets: [
     presetUno(),
     presetAttributify(),
-    presetIcons({
-      scale: 1.2,
-      warn: true
-    })
+    presetIcons()
   ],
   transformers: [
     transformerDirectives(),
