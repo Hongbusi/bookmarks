@@ -1,7 +1,5 @@
-// import { throttleAndDebounce } from '~/utils'
-
-export function useActiveLink() {
-  const isOutlineEnabled = useMediaQuery('(min-width: 137px)')
+export function activeLink() {
+  const isOutlineEnabled = useMediaQuery('(min-width: 500px)')
   const onScroll = throttleAndDebounce(setActiveLink, 100)
   const onClick = (event: Event) => {
     const target = event.target as HTMLElement

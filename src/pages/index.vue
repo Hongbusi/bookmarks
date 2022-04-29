@@ -58,11 +58,11 @@
 </template>
 
 <script setup lang="ts">
-import { useActiveLink } from '~/composables/useActiveLink'
+import { activeLink } from '~/composables'
 
 import bookmarks from '~/bookmarks'
 
-useActiveLink()
+activeLink()
 </script>
 
 <style scoped>
