@@ -1,4 +1,3 @@
-
 <template>
   <footer class="mt-10 mx-auto text-center opacity-50 text-sm">
     Copyright (c) 2022 Hongbusi.
