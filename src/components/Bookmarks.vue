@@ -19,23 +19,23 @@
               </p>
             </div>
           </a>
-          <!-- <div class="flex items-center px-14px h-30px bg-[#c3c4ce]">
+          <div class="flex items-center px-14px h-30px">
             <a :href="item.github" target="_blank">
-              <carbon-logo-github />
+              <div i-carbon-logo-github />
             </a>
             <a
               v-if="item.zhLink"
               :href="item.zhLink"
               target="_blank"
-              class="py-1px ml-8px w-30px text-center transition-all border rounded-2px  border-gray-500/50 text-xs hover:text-[#de3a31] hover:border-[#de3a31]"
+              class="badge-xs-green mx-2"
             >中文</a>
             <a
               v-if="item.enLink"
               :href="item.enLink"
               target="_blank"
-              class="py-1px ml-8px w-30px text-center transition-all border rounded-2px  border-gray-500/50 text-xs hover:text-[#de3a31] hover:border-[#de3a31]"
+              class="badge-xs-red"
             >EN</a>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>

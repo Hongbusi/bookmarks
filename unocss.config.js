@@ -18,7 +18,7 @@ export default defineConfig({
     [/^badge-sm-(.*)$/, ([, c]) => `badge-${c} text-sm px3 py0.6`],
     [/^badge-lg-(.*)$/, ([, c]) => `badge-${c} px3 py0.8`],
     [/^badge-square-(.*)$/, ([, c]) => `badge-${c} w-7 h-7 text-lg font-200 flex flex-none items-center justify-center`],
-    [/^badge-(.*)$/, ([, c]) => `bg-${c}4:10 text-${c}5 rounded-8`]
+    [/^badge-(.*)$/, ([, c]) => `bg-${c}4:10 text-${c}5 rounded`]
   ],
   presets: [
     presetUno(),
