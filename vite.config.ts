@@ -4,14 +4,10 @@ import vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import AutoImport from 'unplugin-auto-import/vite'
-import Icons from 'unplugin-icons/vite'
-import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
 import Unocss from 'unocss/vite'
 
 export default defineConfig({
-  base: '/bookmarks/',
-
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`
@@ -34,8 +30,8 @@ export default defineConfig({
       imports: [
         'vue',
         'vue-router',
-        '@vueuse/head',
-        '@vueuse/core'
+        '@vueuse/core',
+        '@vueuse/head'
       ],
       dts: 'src/auto-imports.d.ts'
     }),
@@ -44,17 +40,7 @@ export default defineConfig({
     Components({
       extensions: ['vue'],
       include: [/\.vue$/, /\.vue\?vue/],
-      dts: 'src/components.d.ts',
-      resolvers: [
-        IconsResolver({
-          componentPrefix: ''
-        })
-      ]
-    }),
-
-    Icons({
-      defaultClass: 'inline',
-      defaultStyle: 'vertical-align: sub;'
+      dts: 'src/components.d.ts'
     }),
 
     Unocss()

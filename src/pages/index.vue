@@ -58,7 +58,7 @@
 </template>
 
 <script setup lang="ts">
-import { useActiveLink } from '~/hooks/useActiveLink'
+import { useActiveLink } from '~/composables/useActiveLink'
 
 import bookmarks from '~/bookmarks'
 

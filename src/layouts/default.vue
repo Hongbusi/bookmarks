@@ -1,23 +1,9 @@
 <template>
-  <main>
-    <header class="bg-white px-16px sm:px-0">
-      <nav class="flex justify-between items-center mx-auto container h-60px">
-        <h2 class="text-lg">
-          Bookmarks
-        </h2>
-        <a class="text-sm transition-all hover:text-[#de3a31]" href="https://github.com/Hongbusi/docs-navigation" target="_blank">
-          参与贡献/建议
-        </a>
-      </nav>
-    </header>
-
+  <main class="px-4 py-10 text-center text-gray-700 dark:text-gray-200">
     <router-view />
-
-    <footer class="container pt-16px pb-30px mx-auto text-center text-gray-600 text-sm">
-      Copyright (c) 2022 Hongbusi.
-      <a class="ml-8px transition-all hover:text-[#de3a31]" href="https://docschina.org" target="_blank">Design - 印记中文</a>
-    </footer>
+    <Footer />
+    <div class="mt-5 mx-auto text-center opacity-25 text-sm">
+      [Default Layout]
+    </div>
   </main>
-
-  <Plum />
 </template>

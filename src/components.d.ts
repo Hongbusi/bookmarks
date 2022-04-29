@@ -4,7 +4,7 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default']
+    Footer: typeof import('./components/Footer.vue')['default']
     Plum: typeof import('./components/Plum.vue')['default']
   }
 }
