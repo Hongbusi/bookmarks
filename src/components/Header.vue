@@ -1,5 +1,5 @@
 <template>
-  <header class="text-xl border-b border-gray-200">
+  <header class="text-xl border-b border-gray-200 dark:border-gray-200/20">
     <nav class="flex justify-between items-center container mx-auto h-60px">
       <router-link class="icon-btn mx-2" to="/" title="首页">
         Bookmarks

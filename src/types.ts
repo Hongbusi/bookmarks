@@ -11,4 +11,4 @@ export interface Bookmark {
   github: string
 }
 
-export type Bookmarks = Record<string, Bookmark[]>
+export type Bookmarks = Bookmark[]
