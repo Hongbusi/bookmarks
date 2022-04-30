@@ -1,7 +1,8 @@
 <template>
   <header class="text-xl h-bg border-b border-gray-200 dark:border-gray-200/20">
     <nav class="flex justify-between items-center container mx-auto h-56px">
-      <router-link class="icon-btn mx-2" to="/" title="首页">
+      <router-link class="flex items-center mx-2" to="/" title="首页">
+        <SvgIcon class="w-40px h-40px" name="logo" />
         Bookmarks
       </router-link>
 
