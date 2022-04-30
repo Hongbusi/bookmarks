@@ -1,6 +1,6 @@
 <template>
   <div class="mb-5 px-5 sm:px-0 js-header-anchor">
-    <div class="relative flex items-center pl-20px h-44px h-bg h-border">
+    <div class="relative flex items-center pl-20px h-44px h-bg font-bold h-border">
       <div class="absolute left-0 w-2px h-24px bg-green" />
       {{ bookmark.title }}
     </div>
@@ -12,29 +12,23 @@
             <div class="px-14px py-10px">
               <div class="flex items-center">
                 <SvgIcon :name="item.icon" class="w-40px h-40px" />
-                <span class="ml-10px font-bold">{{ item.name }}</span>
+                <span class="ml-10px">{{ item.name }}</span>
               </div>
               <p class="line-clamp-2 mt-10px text-sm">
                 {{ item.desc }}
               </p>
             </div>
           </a>
-          <div class="flex items-center px-14px h-30px">
-            <a class="icon-btn mr-2 text-lg" :href="item.github" target="_blank">
+          <div class="flex items-center px-14px h-30px text-xl">
+            <a class="icon-btn mr-3 " :href="item.github" target="_blank">
               <div i-carbon-logo-github />
             </a>
-            <a
-              v-if="item.zhLink"
-              :href="item.zhLink"
-              target="_blank"
-              class="mr-2 icon-btn"
-            >中文</a>
-            <a
-              v-if="item.enLink"
-              :href="item.enLink"
-              target="_blank"
-              class="icon-btn"
-            >EN</a>
+            <a class="icon-btn mr-3" :href="item.zhLink" target="_blank">
+              <div i-icon-park-outline-chinese />
+            </a>
+            <a class="icon-btn" :href="item.enLink" target="_blank">
+              <div i-icon-park-outline-english />
+            </a>
           </div>
         </div>
       </div>
