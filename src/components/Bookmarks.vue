@@ -23,10 +23,10 @@
             <a class="icon-btn mr-3 " :href="item.github" target="_blank">
               <div i-carbon-logo-github />
             </a>
-            <a class="icon-btn mr-3" :href="item.zhLink" target="_blank">
+            <a v-if="item.zhLink" class="icon-btn mr-3" :href="item.zhLink" target="_blank">
               <div i-icon-park-outline-chinese />
             </a>
-            <a class="icon-btn" :href="item.enLink" target="_blank">
+            <a v-if="item.enLink" class="icon-btn" :href="item.enLink" target="_blank">
               <div i-icon-park-outline-english />
             </a>
           </div>
