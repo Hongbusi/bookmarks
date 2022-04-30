@@ -4,7 +4,7 @@
       <div
         v-for="(bookmark, index) in bookmarks"
         :key="index"
-        class="flex items-center px-3 mx-2 h-32px text-sm h-border rounded-16px cursor-pointer bg-black/5 js-link-btn"
+        class="flex items-center px-3 mx-2 h-32px text-sm h-border rounded-16px cursor-pointer transition-all bg-black/5 hover:bg-black/10 js-link-btn"
         :data-index="index"
       >
         <span>{{ bookmark.title }}</span>
@@ -24,6 +24,6 @@ defineProps({
 
 <style scoped>
 .active {
-  @apply text-white bg-black;
+  @apply text-white bg-black hover:bg-black;
 }
 </style>
