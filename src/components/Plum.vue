@@ -123,7 +123,7 @@ onMounted(async() => {
 <style scoped>
 .plum {
   position: fixed;
-  top: 0;
+  top: 56px;
   right: 0;
   bottom: 0;
   left: 0;

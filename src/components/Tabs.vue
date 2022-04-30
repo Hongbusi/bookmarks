@@ -1,13 +1,13 @@
 <template>
   <div class="sticky top-0 pb-5 z-1 hidden sm:block js-menu-list">
-    <div class="flex flex-wrap justify-center items-center p-2 shadow h-bg h-border">
+    <div class="flex flex-wrap justify-center items-center px-3 h-56px h-bg border-b border-gray-200 dark:border-gray-200/20">
       <div
         v-for="(bookmark, index) in bookmarks"
         :key="index"
-        class="px-3 py-1 m-2 text-xs h-border rounded-14px cursor-pointer js-link-btn"
+        class="flex items-center px-3 mx-2 h-32px text-sm h-border rounded-16px cursor-pointer bg-black/5 js-link-btn"
         :data-index="index"
       >
-        {{ bookmark.title }}
+        <span>{{ bookmark.title }}</span>
       </div>
     </div>
   </div>
@@ -24,6 +24,6 @@ defineProps({
 
 <style scoped>
 .active {
-  @apply badge-sm-green;
+  @apply text-white bg-black;
 }
 </style>

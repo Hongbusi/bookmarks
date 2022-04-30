@@ -20,20 +20,20 @@
             </div>
           </a>
           <div class="flex items-center px-14px h-30px">
-            <a :href="item.github" target="_blank">
+            <a class="icon-btn mr-2 text-lg" :href="item.github" target="_blank">
               <div i-carbon-logo-github />
             </a>
             <a
               v-if="item.zhLink"
               :href="item.zhLink"
               target="_blank"
-              class="badge-xs-green mx-2"
+              class="mr-2 icon-btn"
             >中文</a>
             <a
               v-if="item.enLink"
               :href="item.enLink"
               target="_blank"
-              class="badge-xs-red"
+              class="icon-btn"
             >EN</a>
           </div>
         </div>
