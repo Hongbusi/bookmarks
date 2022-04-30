@@ -11,8 +11,8 @@
           <a :href="item.zhLink || item.enLink" target="_blank" class="flex-1">
             <div class="px-14px py-10px">
               <div class="flex items-center">
-                <SvgIcon :name="item.icon" class="w-40px h-40px" />
-                <span class="ml-10px">{{ item.name }}</span>
+                <SvgIcon v-if="item.icon" :name="item.icon" class="mr-10px w-40px h-40px" />
+                <span>{{ item.name }}</span>
               </div>
               <p class="line-clamp-2 mt-10px text-sm">
                 {{ item.desc }}
@@ -20,7 +20,7 @@
             </div>
           </a>
           <div class="flex items-center px-14px h-30px text-xl">
-            <a class="icon-btn mr-3 " :href="item.github" target="_blank">
+            <a v-if="item.github" class="icon-btn mr-3 " :href="item.github" target="_blank">
               <div i-carbon-logo-github />
             </a>
             <a v-if="item.zhLink" class="icon-btn mr-3" :href="item.zhLink" target="_blank">
