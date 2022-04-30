@@ -3,7 +3,7 @@ import type { Bookmarks } from '~/types'
 const bookmarks: Bookmarks = [
   {
     name: 'Vue3',
-    logo: 'https://v3.cn.vuejs.org/logo.png',
+    icon: 'vue',
     desc: '渐进式 JavaScript 框架。',
     zhLink: 'https://v3.cn.vuejs.org',
     enLink: 'https://vuejs.org',
@@ -11,7 +11,7 @@ const bookmarks: Bookmarks = [
   },
   {
     name: 'Vue Router',
-    logo: 'https://router.vuejs.org/logo.png',
+    icon: 'vue',
     desc: 'Vue.js 的官方路由。',
     zhLink: 'https://router.vuejs.org/zh',
     enLink: 'https://router.vuejs.org',
@@ -19,7 +19,7 @@ const bookmarks: Bookmarks = [
   },
   {
     name: 'Vuex',
-    logo: 'https://v3.cn.vuejs.org/logo.png',
+    icon: 'vue',
     desc: 'Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式 + 库。',
     zhLink: 'https://vuex.vuejs.org/zh',
     enLink: 'https://vuex.vuejs.org',
@@ -27,7 +27,7 @@ const bookmarks: Bookmarks = [
   },
   {
     name: 'Pinia',
-    logo: 'https://pinia.vuejs.org/logo.svg',
+    icon: 'pinia',
     desc: 'The Vue Store that you will enjoy using.',
     zhLink: '',
     enLink: 'https://pinia.vuejs.org',
@@ -35,7 +35,7 @@ const bookmarks: Bookmarks = [
   },
   {
     name: 'Vue CLI',
-    logo: 'https://cli.vuejs.org/favicon.png',
+    icon: 'vue',
     desc: 'Vue.js 开发的标准工具。',
     zhLink: 'https://cli.vuejs.org/zh',
     enLink: 'https://cli.vuejs.org',

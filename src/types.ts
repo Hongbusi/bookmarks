@@ -4,7 +4,7 @@ export type UserModule = (ctx: ViteSSGContext) => void
 
 export interface Bookmark {
   name: string
-  logo: string
+  icon: string
   desc: string
   zhLink: string
   enLink: string

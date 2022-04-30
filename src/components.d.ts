@@ -8,6 +8,7 @@ declare module 'vue' {
     Footer: typeof import('./components/Footer.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
     Plum: typeof import('./components/Plum.vue')['default']
+    SvgIcon: typeof import('./components/SvgIcon.vue')['default']
     Tabs: typeof import('./components/Tabs.vue')['default']
   }
 }

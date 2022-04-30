@@ -11,8 +11,8 @@
           <a :href="item.zhLink || item.enLink" target="_blank" class="flex-1">
             <div class="px-14px py-10px">
               <div class="flex items-center">
-                <img class="mr-10px w-40px h-40px font-bold" :src="item.logo" :alt="item.name">
-                {{ item.name }}
+                <SvgIcon :name="item.icon" class="w-40px h-40px" />
+                <span class="ml-10px font-bold">{{ item.name }}</span>
               </div>
               <p class="line-clamp-2 mt-10px text-sm">
                 {{ item.desc }}
@@ -43,6 +43,7 @@
 </template>
 
 <script setup lang="ts">
+import SvgIcon1 from './SvgIcon.vue'
 defineProps({
   bookmark: {
     type: Object,

@@ -6,6 +6,7 @@ import Layouts from 'vite-plugin-vue-layouts'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import Unocss from 'unocss/vite'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
 export default defineConfig({
   resolve: {
@@ -43,6 +44,12 @@ export default defineConfig({
       dts: 'src/components.d.ts'
     }),
 
-    Unocss()
+    Unocss(),
+
+    createSvgIconsPlugin({
+      iconDirs: [path.resolve(process.cwd(), 'src/icons')],
+      symbolId: 'icon-[dir]-[name]',
+      customDomId: '__svg__icons__dom__'
+    })
   ]
 })
