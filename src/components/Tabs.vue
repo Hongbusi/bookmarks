@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky top-0 pb-5 z-1 hidden sm:block js-menu-list">
+  <div class="sticky top-0 z-1 hidden sm:block js-menu-list">
     <div class="flex flex-wrap justify-center items-center px-3 h-56px h-bg border-b border-gray-200 dark:border-gray-200/20">
       <div
         v-for="(bookmark, index) in bookmarks"

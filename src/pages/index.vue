@@ -1,7 +1,7 @@
 <template>
   <Tabs :bookmarks="bookmarks" />
 
-  <div class="h-container">
+  <div class="h-container pt-5">
     <Bookmarks
       v-for="(bookmark, index) in bookmarks"
       :key="index"
