@@ -1,3 +1,15 @@
+/* Custom Property */
+:root {
+  /* colors */
+  --light-background: hsl(0, 0%, 98%);
+  --dark-background: hsl(0, 0%, 7%);
+  --light-gray-1: hsl(0, 0%, 80%);
+  --light-gray-2: hsla(222, 15%, 67%, 0.7);
+  --light-gray-3: hsla(222, 15%, 67%, 0.4);
+  --white: hsl(0, 0%, 100%);
+  --green-1: hsl(175, 84%, 32%);
+}
+
 html,
 body,
 #app {
@@ -8,19 +20,37 @@ body,
 
 html {
   scroll-behavior: smooth;
-  background-color: #f9f9f9;
+  background-color: var(--light-background);
 }
 
 html.dark {
-  background: #121212;
+  background: var(--dark-background);
 }
 
+/* Reset scrollbar */
+::-webkit-scrollbar {
+    height: 12px;
+    width: 12px
+}
+
+::-webkit-scrollbar-thumb {
+    border: 3px dashed transparent;
+    border-radius: 20px;
+    background: var(--light-gray-3);
+    background-clip: content-box
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--light-gray-2);
+}
+
+/* Nprogress */
 #nprogress {
   pointer-events: none;
 }
 
 #nprogress .bar {
-  background: rgb(13,148,136);
+  background: var(--green-1);
   opacity: 0.75;
   position: fixed;
   z-index: 1031;
