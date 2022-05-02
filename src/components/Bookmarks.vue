@@ -37,7 +37,6 @@
 </template>
 
 <script setup lang="ts">
-import SvgIcon1 from './SvgIcon.vue'
 defineProps({
   bookmark: {
     type: Object,
