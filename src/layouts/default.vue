@@ -4,5 +4,6 @@
     <router-view />
     <Footer />
     <Plum />
+    <GoTop />
   </main>
 </template>

@@ -6,6 +6,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     Bookmarks: typeof import('./components/Bookmarks.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
+    GoTop: typeof import('./components/GoTop.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
     Plum: typeof import('./components/Plum.vue')['default']
     SvgIcon: typeof import('./components/SvgIcon.vue')['default']
