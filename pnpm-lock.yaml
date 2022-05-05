@@ -7,7 +7,7 @@ specifiers:
   '@types/node': 17.0.31
   '@types/nprogress': 0.2.0
   '@unocss/reset': 0.30.13
-  '@vitejs/plugin-vue': 2.3.1
+  '@vitejs/plugin-vue': 2.3.2
   '@vueuse/core': 8.4.1
   '@vueuse/head': 0.7.6
   critters: 0.0.16
@@ -40,7 +40,7 @@ devDependencies:
   '@types/node': 17.0.31
   '@types/nprogress': 0.2.0
   '@unocss/reset': 0.30.13
-  '@vitejs/plugin-vue': 2.3.1_vite@2.9.7+vue@3.2.33
+  '@vitejs/plugin-vue': 2.3.2_vite@2.9.7+vue@3.2.33
   critters: 0.0.16
   eslint: 8.14.0
   typescript: 4.6.4
@@ -507,8 +507,8 @@ packages:
       magic-string: 0.26.1
     dev: true
 
-  /@vitejs/plugin-vue/2.3.1_vite@2.9.7+vue@3.2.33:
-    resolution: {integrity: sha512-YNzBt8+jt6bSwpt7LP890U1UcTOIZZxfpE5WOJ638PNxSEKOqAi0+FSKS0nVeukfdZ0Ai/H7AFd6k3hayfGZqQ==}
+  /@vitejs/plugin-vue/2.3.2_vite@2.9.7+vue@3.2.33:
+    resolution: {integrity: sha512-umyypfSHS4kQLdYAnJHhaASq7FRzNCdvcRoQ3uYGNk1/M4a+hXUd7ysN7BLhCrWH6uBokyCkFeUAaFDzSaaSrQ==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       vite: ^2.5.10
