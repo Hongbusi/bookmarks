@@ -28,7 +28,7 @@
     "unocss": "0.30.13",
     "unplugin-auto-import": "0.6.9",
     "unplugin-vue-components": "0.18.5",
-    "vite": "2.9.7",
+    "vite": "2.9.8",
     "vite-plugin-pages": "0.22.0",
     "vite-plugin-svg-icons": "2.0.1",
     "vite-plugin-vue-layouts": "0.6.0",
