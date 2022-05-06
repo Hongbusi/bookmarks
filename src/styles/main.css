@@ -8,12 +8,12 @@ body,
 
 html {
   scroll-behavior: smooth;
-  background-color: hsl(0, 0%, 98%);
+  background-color: rgb(250, 250, 250);
 
 }
 
 html.dark {
-  background:  hsl(0, 0%, 7%);
+  background:  rgb(18, 18, 18);
 }
 
 /* Reset scrollbar */
@@ -25,12 +25,12 @@ html.dark {
 ::-webkit-scrollbar-thumb {
     border: 3px dashed transparent;
     border-radius: 20px;
-    background: hsla(222, 15%, 67%, 0.7);
+    background: rgba(158, 166, 183, 0.7);
     background-clip: content-box
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: hsla(222, 15%, 67%, 0.7);
+    background: rgba(158, 166, 183, 0.7);
 }
 
 /* Nprogress */
@@ -39,7 +39,7 @@ html.dark {
 }
 
 #nprogress .bar {
-  background: hsl(175, 84%, 32%);
+  background: rgb(13, 150, 139);
   opacity: 0.75;
   position: fixed;
   z-index: 1031;
