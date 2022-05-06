@@ -23,7 +23,7 @@
     "@unocss/reset": "0.30.13",
     "@vitejs/plugin-vue": "2.3.2",
     "critters": "0.0.16",
-    "eslint": "8.14.0",
+    "eslint": "8.15.0",
     "typescript": "4.6.4",
     "unocss": "0.30.13",
     "unplugin-auto-import": "0.6.9",
