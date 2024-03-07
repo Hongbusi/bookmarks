@@ -6,8 +6,8 @@ import { fontSans } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { ThemeProvider } from '@/components/theme-provider'
-import { SiteHeader } from '@/components/site-header'
-import { GoogleAnalytics } from '@/components/google-analytics'
+import { Analytics } from '@/components/analytics'
+import { Toaster } from '@/components/ui/toaster'
 
 export const viewport: Viewport = {
   themeColor: [
@@ -42,12 +42,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable,
           )}
         >
-          <GoogleAnalytics />
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="relative flex min-h-screen flex-col">
-              <SiteHeader />
-              <div className="flex-1">{children}</div>
-            </div>
+            {children}
+            <Analytics />
+            <Toaster />
             <TailwindIndicator />
           </ThemeProvider>
         </body>
