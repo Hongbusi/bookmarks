@@ -1,4 +1,5 @@
-import CreateButton from './create-button'
+import Link from 'next/link'
+import { Bookmark } from 'lucide-react'
 import { createClient } from '@/lib/supabase/server'
 
 export default async function Home() {
@@ -8,9 +9,21 @@ export default async function Home() {
 
   return (
     <div className="container">
-      <h1>Bookmarks</h1>
-      <pre>{JSON.stringify(bookmarks, null, 2)}</pre>
-      <CreateButton />
+      <div className="grid grid-cols-8 gap-2 mt-4">
+        {bookmarks.map(bookmark => (
+          <Link
+            href={bookmark.url}
+            target="_blank"
+            key={Bookmark.id}
+          >
+            <div className="p-4 border">
+              <h2>{bookmark.title}</h2>
+              <p className="text-sm">{bookmark.description}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
+
     </div>
   )
 }
