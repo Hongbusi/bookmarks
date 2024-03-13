@@ -1,11 +1,12 @@
 import Link from 'next/link'
-import { Bookmark } from 'lucide-react'
+
 import { createClient } from '@/lib/supabase/server'
+import type { Bookmark } from '@/types'
 
 export default async function Home() {
   const supabase = createClient()
 
-  const { data: bookmarks } = await supabase.from('bookmarks').select('*')
+  const { data: bookmarks } = await supabase.from('bookmarks').select('*') as { data: Bookmark[] }
 
   return (
     <div className="container">
@@ -14,7 +15,7 @@ export default async function Home() {
           <Link
             href={bookmark.url}
             target="_blank"
-            key={Bookmark.id}
+            key={bookmark.id}
           >
             <div className="p-4 border">
               <h2>{bookmark.title}</h2>

@@ -18,3 +18,11 @@ export interface AdminConfig {
   mainNav: MainNavItem[]
   sidebarNav: SidebarNavItem[]
 }
+
+export interface Bookmark {
+  id: string
+  title: string
+  logo: string
+  url: string
+  description: string
+}

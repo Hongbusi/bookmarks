@@ -41,14 +41,7 @@ import {
   TableRow,
 } from '@/components/ui/table'
 import { AdminHeader } from '@/components/admin/header'
-
-export interface Bookmark {
-  id: string
-  title: string
-  logo: string
-  url: string
-  description: string
-}
+import type { Bookmark } from '@/types'
 
 export default function BookmarksPage() {
   const supabase = createClient()
