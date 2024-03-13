@@ -1,9 +1,16 @@
-import { Button } from '@/components/ui/button'
+import CreateButton from './create-button'
+import { createClient } from '@/lib/supabase/server'
 
-export default function Home() {
+export default async function Home() {
+  const supabase = createClient()
+
+  const { data: bookmarks } = await supabase.from('bookmarks').select('*')
+
   return (
     <div className="container">
-      <Button>Click me</Button>
+      <h1>Bookmarks</h1>
+      <pre>{JSON.stringify(bookmarks, null, 2)}</pre>
+      <CreateButton />
     </div>
   )
 }
