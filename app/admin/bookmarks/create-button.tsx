@@ -1,5 +1,6 @@
 'use client'
 
+import * as React from 'react'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -23,16 +24,23 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
+import { Icons } from '@/components/icons'
 
 const formSchema = z.object({
   title: z.string().min(2).max(50),
-  logo: z.string().url(),
+  logo: z.string().url().optional(),
   url: z.string().url(),
   description: z.string().max(255),
 })
 
-export default function CreateButton() {
+interface CreateButtonProps {
+  onRefresh: () => void
+}
+
+export default function CreateButton({ onRefresh }: CreateButtonProps) {
   const supabase = createClient()
+  const [isOpen, setIsOpen] = React.useState<boolean>(false)
+  const [isLoading, setIsLoading] = React.useState<boolean>(false)
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -40,16 +48,23 @@ export default function CreateButton() {
   })
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    const { data: { user } } = await supabase.auth.getUser()
+    setIsLoading(true)
 
+    const { data: { user } } = await supabase.auth.getUser()
     await supabase
       .from('bookmarks')
       .insert([{ ...values, user_id: user?.id }])
       .select()
+
+    setIsOpen(false)
+    setIsLoading(false)
+    form.reset()
+
+    onRefresh()
   }
 
   return (
-    <Dialog>
+    <Dialog open={isOpen} onOpenChange={(open: boolean) => setIsOpen(open)}>
       <DialogTrigger asChild>
         <Button>Create</Button>
       </DialogTrigger>
@@ -113,7 +128,12 @@ export default function CreateButton() {
               )}
             />
             <DialogFooter>
-              <Button type="submit">Submit</Button>
+              <Button type="submit" disabled={isLoading}>
+                {isLoading && (
+                  <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+                )}
+                Submit
+              </Button>
             </DialogFooter>
           </form>
         </Form>

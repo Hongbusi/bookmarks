@@ -132,7 +132,7 @@ export default function BookmarksPage() {
   return (
     <div className="w-full">
       <AdminHeader heading="Bookmarks" text="Create and manage bookmarks.">
-        <CreateButton />
+        <CreateButton onRefresh={getData} />
       </AdminHeader>
 
       <div className="flex items-center py-4">
