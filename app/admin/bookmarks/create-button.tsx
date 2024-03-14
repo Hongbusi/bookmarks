@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 
 import { createClient } from '@/lib/supabase/client'
+import { calculateFileSamplingHash, ext } from '@/lib/file'
 import { Button } from '@/components/ui/button'
 import {
   Form,
@@ -39,7 +40,9 @@ interface CreateButtonProps {
 
 export default function CreateButton({ onRefresh }: CreateButtonProps) {
   const supabase = createClient()
+
   const [isOpen, setIsOpen] = React.useState<boolean>(false)
+  const [fileName, setFileName] = React.useState<string>('')
   const [isLoading, setIsLoading] = React.useState<boolean>(false)
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -47,13 +50,23 @@ export default function CreateButton({ onRefresh }: CreateButtonProps) {
     defaultValues: {},
   })
 
+  const handleChangeFile = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0]
+
+    if (file) {
+      const hash = await calculateFileSamplingHash(file)
+      const fileName = `https://oss.hongbusi.com/icons/${hash}.${ext(file.name)}`
+      setFileName(fileName)
+    }
+  }
+
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true)
 
     const { data: { user } } = await supabase.auth.getUser()
     await supabase
       .from('bookmarks')
-      .insert([{ ...values, user_id: user?.id }])
+      .insert([{ ...values, logo: fileName, user_id: user?.id }])
       .select()
 
     setIsOpen(false)
@@ -95,7 +108,7 @@ export default function CreateButton({ onRefresh }: CreateButtonProps) {
                 <FormItem>
                   <FormLabel>Logo</FormLabel>
                   <FormControl>
-                    <Input {...field} />
+                    <Input {...field} type="file" onChange={handleChangeFile} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
