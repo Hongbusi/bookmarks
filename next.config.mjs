@@ -1,4 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'oss.hongbusi.com',
+        port: '',
+        pathname: '/icons/**',
+      },
+    ],
+  },
+}
 
 export default nextConfig
