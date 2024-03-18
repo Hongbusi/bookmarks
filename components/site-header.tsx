@@ -5,7 +5,6 @@ import { siteConfig } from '@/config/site'
 import { buttonVariants } from '@/components/ui/button'
 import { MainNav } from '@/components/main-nav'
 import { ThemeToggle } from '@/components/theme-toggle'
-import { cn } from '@/lib/utils'
 
 export function SiteHeader() {
   return (
@@ -45,15 +44,6 @@ export function SiteHeader() {
               </div>
             </Link>
             <ThemeToggle />
-            <Link
-              href="/login"
-              className={cn(
-                buttonVariants({ variant: 'secondary', size: 'sm' }),
-                'px-4',
-              )}
-            >
-              Login
-            </Link>
           </nav>
         </div>
       </div>
