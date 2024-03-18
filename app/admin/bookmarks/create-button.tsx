@@ -26,6 +26,7 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog'
 import { Icons } from '@/components/icons'
+import type { Bookmark } from '@/types'
 
 const formSchema = z.object({
   title: z.string().min(2).max(50),
@@ -38,11 +39,17 @@ interface CreateButtonProps {
   onRefresh: () => void
 }
 
-export default function CreateButton({ onRefresh }: CreateButtonProps) {
+export interface CreateButtonRef {
+  update: (bookmark: Bookmark) => void
+}
+
+// eslint-disable-next-line react/display-name
+const CreateButton = React.forwardRef<CreateButtonRef, CreateButtonProps>(({ onRefresh }, ref) => {
   const supabase = createClient()
 
   const [isOpen, setIsOpen] = React.useState<boolean>(false)
-  const [fileName, setFileName] = React.useState<string>('')
+  const [isEdit, setIsEdit] = React.useState<boolean>(false)
+  const [currentBookmark, setCurrentBookmark] = React.useState<Bookmark | null>(null)
   const [isLoading, setIsLoading] = React.useState<boolean>(false)
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -56,18 +63,34 @@ export default function CreateButton({ onRefresh }: CreateButtonProps) {
     if (file) {
       const hash = await calculateFileSamplingHash(file)
       const fileName = `https://oss.hongbusi.com/icons/${hash}.${ext(file.name)}`
-      setFileName(fileName)
+      form.setValue('logo', fileName)
     }
+  }
+
+  const handleOpenChange = (open: boolean) => {
+    if (!open && isEdit) {
+      setCurrentBookmark(null)
+      form.reset()
+      setIsEdit(false)
+    }
+    setIsOpen(open)
   }
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true)
 
     const { data: { user } } = await supabase.auth.getUser()
-    await supabase
-      .from('bookmarks')
-      .insert([{ ...values, logo: fileName, user_id: user?.id }])
-      .select()
+
+    isEdit
+      ? await supabase
+        .from('bookmarks')
+        .update(values)
+        .eq('id', currentBookmark?.id)
+        .select()
+      : await supabase
+        .from('bookmarks')
+        .insert([{ ...values, user_id: user?.id }])
+        .select()
 
     setIsOpen(false)
     setIsLoading(false)
@@ -76,15 +99,28 @@ export default function CreateButton({ onRefresh }: CreateButtonProps) {
     onRefresh()
   }
 
+  React.useImperativeHandle(ref, () => ({
+    update(bookmark: Bookmark) {
+      form.reset(bookmark)
+      setIsEdit(true)
+      setCurrentBookmark(bookmark)
+      setIsOpen(true)
+    },
+  }))
+
   return (
-    <Dialog open={isOpen} onOpenChange={(open: boolean) => setIsOpen(open)}>
+    <Dialog open={isOpen} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
         <Button>Create</Button>
       </DialogTrigger>
 
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Create bookmark</DialogTitle>
+          <DialogTitle>
+            {isEdit ? 'Update' : 'Create'}
+            {' '}
+            bookmark
+          </DialogTitle>
         </DialogHeader>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
@@ -108,7 +144,19 @@ export default function CreateButton({ onRefresh }: CreateButtonProps) {
                 <FormItem>
                   <FormLabel>Logo</FormLabel>
                   <FormControl>
-                    <Input {...field} type="file" onChange={handleChangeFile} />
+                    <div className="flex space-x-2">
+                      <Input {...field} />
+                      <div className="relative">
+                        <input
+                          type="file"
+                          className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer"
+                          onChange={handleChangeFile}
+                        />
+                        <Button variant="outline">
+                          选择文件
+                        </Button>
+                      </div>
+                    </div>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -153,4 +201,6 @@ export default function CreateButton({ onRefresh }: CreateButtonProps) {
       </DialogContent>
     </Dialog>
   )
-}
+})
+
+export default CreateButton

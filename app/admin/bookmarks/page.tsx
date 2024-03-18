@@ -20,6 +20,7 @@ import {
   useReactTable,
 } from '@tanstack/react-table'
 
+import type { CreateButtonRef } from './create-button'
 import CreateButton from './create-button'
 import { createClient } from '@/lib/supabase/client'
 import { Button } from '@/components/ui/button'
@@ -46,6 +47,7 @@ import type { Bookmark } from '@/types'
 export default function BookmarksPage() {
   const supabase = createClient()
 
+  const createButtonRef = React.useRef<CreateButtonRef>(null)
   const [bookmarks, setBookmarks] = React.useState<Bookmark[]>([])
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([])
@@ -87,8 +89,8 @@ export default function BookmarksPage() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuLabel>Actions</DropdownMenuLabel>
-              <DropdownMenuItem>Update bookmark</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => handleClickDelete(row.id)}>Delete bookmark</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => createButtonRef?.current?.update(row.original)}>Update bookmark</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleClickDelete(row.original.id)}>Delete bookmark</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         )
@@ -132,7 +134,7 @@ export default function BookmarksPage() {
   return (
     <div className="w-full">
       <AdminHeader heading="Bookmarks" text="Create and manage bookmarks.">
-        <CreateButton onRefresh={getData} />
+        <CreateButton ref={createButtonRef} onRefresh={getData} />
       </AdminHeader>
 
       <div className="flex items-center py-4">

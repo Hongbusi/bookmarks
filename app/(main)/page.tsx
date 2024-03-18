@@ -9,19 +9,23 @@ function BookmarkLogo(bookmark: Bookmark) {
   const { title, logo } = bookmark
   if (!logo) {
     return (
-      <div className="flex justify-center items-center w-[56px] h-[56px] text-2xl rounded-full border">
-        {title.charAt(0)}
+      <div className="w-[56px]">
+        <div className="flex justify-center items-center w-[56px] h-[56px] text-2xl rounded-full border">
+          {title.charAt(0)}
+        </div>
       </div>
     )
   }
   return (
-    <Image
-      className="rounded-full border"
-      src={logo}
-      width={56}
-      height={56}
-      alt={title}
-    />
+    <div className="w-[56px]">
+      <Image
+        className="rounded-full border"
+        src={logo}
+        width={56}
+        height={56}
+        alt={title}
+      />
+    </div>
   )
 }
 
@@ -32,7 +36,7 @@ export default async function Home() {
 
   return (
     <div className="container">
-      <div className="grid grid-cols-6 gap-2 mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-4">
         {bookmarks.map(bookmark => (
           <HoverCard key={bookmark.id}>
             <HoverCardTrigger asChild>
@@ -41,7 +45,7 @@ export default async function Home() {
                   <BookmarkLogo {...bookmark} />
                   <div className="flex flex-col justify-between pl-4 w-[calc(100%-56px)]">
                     <h2 className="truncate">{bookmark.title}</h2>
-                    <p className="text-sm truncate">{bookmark.description}</p>
+                    <p className="text-sm opacity-75 truncate">{bookmark.description}</p>
                   </div>
                 </div>
               </Link>
@@ -49,9 +53,9 @@ export default async function Home() {
             <HoverCardContent className="w-80">
               <div className="flex space-x-4">
                 <BookmarkLogo {...bookmark} />
-                <div className="flex-auto space-y-1">
+                <div className="w-[calc(100%-56px)] space-y-1">
                   <h4>{bookmark.title}</h4>
-                  <p className="text-sm">{bookmark.description}</p>
+                  <p className="text-xs opacity-75">{bookmark.description}</p>
                 </div>
               </div>
             </HoverCardContent>
