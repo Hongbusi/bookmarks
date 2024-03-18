@@ -3,15 +3,10 @@ export type SiteConfig = typeof siteConfig
 export const siteConfig = {
   name: 'Bookmarks',
   description: '',
-  mainNav: [
-    {
-      title: 'Home',
-      href: '/',
-    },
-  ],
+  mainNav: [],
   links: {
+    github: 'https://github.com/Hongbusi',
     twitter: 'https://twitter.com/Hongbusi',
-    github: 'https://github.com/Hongbusi/start-next',
   },
-  gaId: '',
+  gaId: 'G-RYGT8YP7FW',
 }
